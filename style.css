@@ -1,0 +1,246 @@
+/* Fonts */
+@font-face {
+    font-family: Poppins;
+    src: url("assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("assets/fonts/Ubuntu-Regular.ttf");
+}
+
+/* variables */
+:root{
+    --font-ubuntu: Ubuntu;
+    --font-poppins: Poppins;
+    --theme-color: #02eab4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+/* ****** For Mobile and Smartphone screen ******* */
+
+/* Header styling */
+header{
+    width: 100%;
+    height: 100vh;
+    background: url("assets/images/bg.png") no-repeat center;
+    background-size: cover;
+    color: white;
+    font-family: var(--font-ubuntu);
+}
+
+header #navbar{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 999;
+}
+
+header #navbar .logo{
+    color: white;
+    line-height: 70px;
+    font-size: 24px;
+    margin-left: 30px;
+}
+
+header #navbar .logo span{
+    color: var(--theme-color);
+}
+
+header nav #menuBtn{
+    color: var(--theme-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 70px;
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+header nav ul a{
+    color: white;
+    font-size: 17px;
+    transition: all 0.5s;
+}
+
+header nav ul a:hover{
+    color: var(--theme-color);
+}
+
+header nav ul{
+    width: 0%;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+header nav ul li{
+    padding: 10px 0;
+}
+
+header .container{
+    position: absolute;
+    padding-top: 70px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+header .container p{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+header .container h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: var(--theme-color);
+    padding: 10px 0px;
+}
+
+header .container h2{
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    width: 85vw;
+    padding-bottom: 20px;
+}
+
+header .container a {
+    font-size: 18px;
+    background-color: var(--theme-color);
+    font-size: 500;
+    color: black;
+    padding: 8px 36px;
+}
+
+/* About styling */
+.about{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 40px 0;
+}
+.about .col{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    margin: 20px auto;
+    background-color: #eef1f6;
+}
+
+main{
+    font-family: var(--font-poppins);
+}
+
+.about .col img{
+    width: 90%;
+    margin-top: 30px;
+}
+
+.about .col h1{
+    font-size: 20px;
+    margin: 10px 15px;
+}
+
+.about .col p{
+    font-size: 10px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.about .col2{
+    position: relative;
+}
+
+.about .col2 .sm-icons{
+    position: absolute;
+    bottom: 10px;
+    margin: 0 15px;
+}
+
+.about .col2 .sm-icons a{
+    color: black;
+    font-size: 18px;
+    padding-left: 16px;
+}
+
+/* ****** For Tablets and Ipad screen ******* */
+
+/* ****** For Tablets portrait mode and desktops screen ******* */
+
+@media (min-width: 1024px){
+    /* header styling */
+    header nav ul{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        height: auto;
+        background-color: transparent;
+        margin-left: 250px;
+        top: 0;
+    }
+
+    header nav ul li{
+        padding: 0 30px;
+        line-height: 70px;
+    }
+
+    header nav ul a{
+        font-size: 15px;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+    
+    header nav ul li .borderBottom{
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: var(--theme-color);
+        bottom: 15px;
+        transition: all .5s;
+    }
+
+    header nav ul li:hover > .borderBottom{
+        width: 60px;
+    }
+
+    header .container{
+       margin-top: 8%;
+    }
+    
+    header .container p{
+        font-size: 40px;
+    }
+    
+    header .container h1{
+        font-size: 70px;
+    }
+    
+    header .container h2{
+        font-size: 27px;
+        width: 50vw;
+        padding-bottom: 30px;
+    }
+    
+    header .container a {
+        padding: 10px 40px;
+    }
+}
