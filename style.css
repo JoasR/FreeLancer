@@ -129,12 +129,18 @@ header .container a {
 }
 
 /* About styling */
+
+main{
+    font-family: var(--font-poppins);
+}
+
 .about{
     width: 100%;
     height: auto;
     text-align: center;
     margin: 40px 0;
 }
+
 .about .col{
     width: 250px;
     height: 250px;
@@ -142,10 +148,6 @@ header .container a {
     display: block;
     margin: 20px auto;
     background-color: #eef1f6;
-}
-
-main{
-    font-family: var(--font-poppins);
 }
 
 .about .col img{
@@ -180,7 +182,260 @@ main{
     padding-left: 16px;
 }
 
+/* services styling */
+
+.services{
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.services h1{
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.services h2{
+    font-size: 13px;
+    width: 84%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.services .col {
+    width: 250px;
+    height: 180px;
+    margin: 30px auto;
+    display: block;
+    transform: all .5s;
+}
+
+.services .col:hover {
+    transform: scale(1.1);
+}
+
+.services .col i {
+    color: var(--theme-color);
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.services .col h3{
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.services .col h4{
+    font-size: 10px;
+    width: 97%;
+    text-align: center;
+}
+
+/* latest works styling */
+
+.works{
+    width: 100%;
+    height: auto;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.works h1{
+    font-size: 23px;
+}
+
+.works h3{
+    font-size: 12px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.works ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.works ul a{
+    font-size: 11px;
+    color: black;
+    font-weight: 600;
+}
+
+.works ul .active{
+    color: var(--theme-color);
+}
+
+.works .images{
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.works .images img{
+    width: 90%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* contact form styling */
+
+.contact{
+    width: 90vw;
+    height: auto;
+    text-align: center;
+    margin: 60px auto;
+}
+
+.contact h1{
+    font-size: 23px;
+}
+
+.contact h3{
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.contact .inline-container{
+    width: 100%;
+    display: inline-block;
+}
+
+.contact input , textarea{
+    display: block;
+    background-color: #f6f6f6;
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 45px;
+    padding: 0 10px;
+    margin: 15px auto;
+    font-family: var(--font-ubuntu);
+    border-bottom: 2px solid #b1b1b8;
+    font-size: 12px;
+}
+
+.contact input:hover , textarea:hover{
+    border-bottom: 2px solid var(--theme-color);
+}
+
+.contact textarea{
+    margin: 40px auto;
+    padding: 10px;
+    height: 80px;
+}
+
+.contact button{
+    width: 75%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: var(--theme-color);
+    font-family: var(--font-ubuntu);
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.contact button:hover{
+    opacity: 1;
+}
+
+/* footer styling */
+
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    text-align: center;
+    color: var(--theme-color);
+    font-family: var(--font-ubuntu);
+}
+
+footer p{
+    font-size: 15px;
+    padding-top: 20px;
+}
+
 /* ****** For Tablets and Ipad screen ******* */
+
+@media(min-width: 767px) {
+    /* about styling */
+    .about .col{
+        width: 350px;
+        height: 350px;
+    }
+    
+    .about .col h1{
+        font-size: 23px;
+    }
+    
+    .about .col p{
+        font-size: 13px;
+    }
+
+    /* services styling */
+
+    .services .col {
+        width: 350px;
+        height: 230px;
+        margin: 40px auto;
+        display: block;
+        transition: all .5s;
+    }
+    
+    .services .col:hover {
+        transform: scale(1.1);
+    }
+    
+    .services .col i {
+        font-size: 50px;
+    }
+    
+    .services .col h3{
+        font-size: 17px;
+    }
+    
+    .services .col h4{
+        font-size: 12px;
+    }
+
+    /* latest works styling */
+
+    .works h1{
+        font-size: 27px;
+    }
+    
+    .works h3{
+        font-size: 15px;
+        width: 70%;
+        margin: 20px auto;
+    }
+    
+    .works ul a{
+        font-size: 14px;
+    }
+    
+    .works .images{
+        width: 90vw;
+        height: auto;
+        margin: 30px auto;
+    }
+    
+    .works .images img{
+        width: 40%;
+    }
+
+    /* contact form styling */
+    
+    .contact .inline-container input{
+        width: 33%;
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    .contact button{
+       width: 70%;
+    }
+}
 
 /* ****** For Tablets portrait mode and desktops screen ******* */
 
@@ -242,5 +497,93 @@ main{
     
     header .container a {
         padding: 10px 40px;
+    }
+
+    /* about styling */
+    .about{
+        margin: 60px 0;
+    }
+    .about .col{
+        width: 350px;
+        height: 350px;
+        display: inline-block;
+        margin: 20px 30px;
+    }
+    
+    .about .col h1{
+        font-size: 23px;
+    }
+    
+    .about .col p{
+        font-size: 13px;
+    }
+
+     /* services styling */
+
+     .services {
+        margin: 100px 0;
+     }
+
+     .services h1{
+        font-size: 27px;
+     }
+
+     .services h2{
+        font-size: 12px;
+        width: 50%;
+        font-weight: 300;
+     }
+
+     .services .col {
+        width: 350px;
+        height: 230px;
+        margin: 30px 20px;
+        display: inline-block;
+        transition: all .5s;
+        cursor: pointer;
+    }
+    
+    .services .col:hover {
+        transform: scale(1.1);
+    }
+
+    /* latest work styling */
+
+    .works h1{
+        font-size: 30px;
+    }
+    
+    .works ul li{
+        display: inline-block;
+    }
+
+    .works ul a{
+        font-size: 14px;
+        color: #828282;
+    }
+  
+    .works .images img{
+        width: 25%;
+        margin: 20px;
+        box-shadow: 3px 2px 5px 1px #f2f2f2;
+    }
+
+    /* contact form styling */
+
+    .contact .inline-container input{
+        width: 34%;
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    .contact button{
+       width: 50%;
+       cursor: pointer;
+    }
+
+    .contact h3{
+        width: 60%;
+        margin: 30px auto;
+        font-weight: 400;
     }
 }
